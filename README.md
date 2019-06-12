@@ -11,4 +11,3 @@ This summer, I am working as a research and policy intern at the Justice Policy 
 ## My Portfolios 
 In the coming weeks, I will add content to this GitHub space that displays the data visualization and analysis skills I am acquiring. Here is a sample of my previous work:
  
-https://scleder.github.io/670final/
