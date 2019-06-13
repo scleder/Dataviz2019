@@ -1,0 +1,78 @@
+---
+title: "RMaps"
+author: "Sarah Leder"
+date: "6/12/2019"
+output: 
+  html_document: 
+    theme: yeti
+    highlight: haddock
+    number_sections: yes
+    toc: yes
+    toc_float: true
+    code_folding: hide
+  pdf_document: 
+    number_sections: yes
+    toc: yes
+  slidy_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      message = FALSE,
+                      warning = FALSE)
+
+```
+
+For this project, I used 2017 ACS data and mapped Baltimore City and Washington D.C.'s Median Family Incomes.
+
+# Baltimore
+
+```{r}
+library(tidyverse)
+library(tidycensus)
+library(mapview)
+
+options(tigris_use_cache = TRUE)
+
+Baltimore <- get_acs(state = "MD",
+                     county = "Baltimore City",
+                     geography = "tract",
+                     variables = "B19013_001",
+                     geometry = TRUE)
+
+Baltimore %>%
+  ggplot(aes(fill=estimate)) +
+  geom_sf() +
+  labs(subtitle = "Baltimore City: Median Family Income") +
+  scale_fill_viridis_c()
+```
+
+## Interactive Version
+
+```{r}
+mapview(Baltimore, zcol = "estimate", legend = TRUE, 
+        layer.name = "Baltimore City: Median Family Income")
+```
+
+# Washington, D.C.
+
+```{r}
+DC <- get_acs(state = "DC",
+              county = "District of Columbia",
+              geography = "tract",
+              variables = "B19013_001",
+                     geometry = TRUE)
+
+DC%>%
+  ggplot(aes(fill=estimate)) +
+           geom_sf() + 
+           labs(subtitle = "Washington, D.C.: Median Family Income") +
+           scale_fill_viridis_c()
+```
+
+## Interactive Version
+
+```{r}
+mapview(DC, zcol = "estimate", legend = TRUE, 
+        layer.name = "Washington D.C.: Median Family Income")
+```
