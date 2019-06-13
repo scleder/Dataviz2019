@@ -20,7 +20,8 @@ My name is Sarah Leder and I am an MSW candidate at the University of Michigan's
 ## Current Work
 This summer, I am working as a research and policy intern at the Justice Policy Institute in Washington, D.C. I am working on projects concerning how young adults (ages 18-22) are charged and sentenced in D.C.
 
-## My Porfolio
+# My Porfolio
 As the summer continues, I will add content to this GitHub space that displays the data visualization and analysis skills I am acquiring. Below are samples of my previous work:
 
 * [Mapping with R](https://scleder.github.io/RMaps/?)
+* More to come
