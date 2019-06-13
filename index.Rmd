@@ -23,5 +23,6 @@ This summer, I am working as a research and policy intern at the Justice Policy 
 # My Porfolio
 As the summer continues, I will add content to this GitHub space that displays the data visualization and analysis skills I am acquiring. Below are samples of my previous work:
 
-* [Mapping with R](https://scleder.github.io/RMaps/?)
+* [Spring 2019 Portfolio](https://scleder.github.io/Dataviz2019/Spring_2019_Portfolio.html)
+* [Mapping with R](https://scleder.github.io/Dataviz2019/RMaps.html)
 * More to come
