@@ -1,0 +1,298 @@
+---
+title: "Spring 2019 Portfolio"
+author: "Sarah Leder"
+date: "4/16/2019"
+output: 
+  html_document: 
+    theme: yeti
+    highlight: haddock
+    number_sections: yes
+    toc: yes
+    toc_float: true
+    code_folding: hide
+  pdf_document: 
+    number_sections: yes
+    toc: yes
+  slidy_presentation: default
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, 
+                      message = FALSE,
+                      warning = FALSE)
+
+```
+
+# **Introduction**
+
+Over the course of the semester I worked with various data visualization softwares and learned to represent data in different, imaginative ways. My interests lie in criminal justice reform, so I elected to work with demographic information of prisoners in 2016. For each graph and map in this portfolio, I worked with the Bureau of Justice Statistics "Correctional Populations in the United States, 2016" report (NCJ 251211). 
+
+This portfolio was created using R Markdown. 
+
+## My Data
+
+I chose to work with this dataset because of my interest surrounding the American criminal "justice" system. Despite representing approximately 5% of the world's population, the United States holds roughly 25% of the world's incarcerated population. Currently, there are about 2.2 million incarcerated Americans and 6.6 million under some type of community supervision (e.g. parole, probation). As more politicians promise to address the issue of mass incarceration, the overall number of incarcerated individuals has slowly been declining in over the last ten or so years. 
+
+# **R Software** 
+
+## Base R
+
+I began by working with the open-sourced R Software. The graph below depicts the the population under communnity supervision in 2000 and the trend from 2006 through 2016. The Bureau of  Justice Statistics tracks three overall numbers from states: the number of individuals under community supervision, the number of individuals on parole/probation, and the number of individuals incarcerated in jails or prisons. 
+
+```{r}
+library(readxl)
+library(ggplot2)
+library(ggthemes)
+library(tidyr)
+library(png)
+library(grid)
+
+Annual_BJS_Data <- read_excel("//Sarah/U. of Michigan/Semester 2/SW 670 001/R Data/Annual BJS /Annual BJS Data.xlsx")
+plot(Annual_BJS_Data$Year,
+     Annual_BJS_Data$IT,
+     ylim = range(0,8000000),
+     pch=16,
+     col="blue",
+     xlab = "Year",
+     ylab = "Number of Individuals",
+     main="Correctional Supervision Trends in the US")
+par(new=TRUE)
+plot(Annual_BJS_Data$Year,
+     Annual_BJS_Data$TCP,
+     ylim = range(0,8000000),
+     pch=16,
+     col="grey50",
+     xlab = "Year",
+     ylab = "Number of Individuals")
+par(new=TRUE)
+plot(Annual_BJS_Data$Year,
+     Annual_BJS_Data$CST,
+     ylim = range(0,8000000), 
+     pch=16,
+     col="red",
+     xlab = "Year",
+     ylab = "Number of Individuals")
+legend("bottomleft",
+       legend=c("Number of Individuals Criminal Justice System", 
+                "Number of Individuals on Parole/Probation", 
+                "Number of Individuals Incarerated"),
+       bty = "n", 
+       fill=c("Grey50","red","Blue")) 
+
+```
+
+Please note: I have included all libraries I use in this portfolio in this first chunk of code, but I also include them throughout the rest of the document. I chose to do so in order to allow viewers to better comprehend how I created each graph.
+
+## Using the ggplot, ggthemes, and tidyr Libraries
+
+After a quick introduction to R, I began adding libraries and working with more sophisticated commands. As a result, I was able to create a grouped bar chart that better shows the trends in community supervision trends in the United States. I believe this presentation is much better than the Base R pointalized graph above. It more clearly displays that the population of American citizens under community supervision peaked in 2007 and has been *slowly* decreasing.
+
+```{r}
+library(ggplot2)
+library(ggthemes)
+library(tidyr)
+
+df<-data.frame(Year=c("2000","2006","2007","2008","2009",
+                      "2010","2011","2012","2013","2014",
+                      "2015","2016"),
+               TCP=c("6467800","7199600","7339600","7312600",
+                     "7239100","7089000","6994500","6949800",
+                     "6899700","6856900","6740300","6613500"),
+               CST=c("4564900","5035000","5119000","5093400",
+                     "5019900","4888500","4818300","4790700",
+                     "4749800","4713200","4650900","4537100"),
+               IT=c("1945400","2256600","2296400","2310300",
+                    "2297700","2279100","2252500","2231300",
+                    "2222500","2225100","2172800","2162400"))
+
+myreshapeddf<-gather(df,
+                        key,
+                        value,
+                        2:4) 
+
+ggplot(myreshapeddf,
+       aes(x=Year,
+           y=value,
+           fill=key,value)) + 
+  geom_bar(stat = "identity",
+           position = position_dodge())+ 
+  theme_bw()+
+  theme(plot.title = element_text(hjust=0.5),
+        axis.text.y = element_text(size = 5))+
+  labs(title="Incarceration Trends in the US",
+       x="Year",
+       y="Number of Individuals")+
+  scale_fill_economist(breaks=c("TCP","CST","IT"),
+                    labels=c("Under 'Community \nSupervision'",
+                             "On \nProbation/Parole",
+                             "Incarcerated"))
+
+
+```
+
+I was also interested in the state-by-state breakdown of the use of community supervision, parole/probation, and incarceration. It is important to note that this graph shows the number of individuals who are under some type of community supervision and does not take the overall state population into consideration. 
+
+```{r}
+
+library(ggplot2)
+library(ggthemes)
+library(tidyr)
+
+df1<-data.frame(PL=c("AL","AK","AZ","AR",
+                      "CA","CO","CT","DE","DC","FL","GA",
+                      "HI","ID","IL","IN","IA","KA","KY",
+                      "LA","ME","MD","MA","MI","MN","MS",
+                      "MO","MT","NE","NV","NH","NJ","NM",
+                      "NY","NC","ND","OH","OK","OR","PA",
+                      "RI","SC","SD","TN","TX","UT","VT",
+                      "VA","WA","WV","WI","WY"),
+                TCP=c("99800","129000","137500","72100",
+                      "536100","121900","59600","22400","10400","366000","0",
+                      "27500","48800","204200","159900","46700","38500","97900",
+                      "111000","10300","99000","82900","0","119500","65300",
+                      "105900","15200","23300","39200","10800","186300","30200",
+                      "212100","149300","10300","326200","74500","82000","368100",
+                      "24300","68800","15000","119400","681900","25400","7400",
+                      "120000","127000","20100","100,500","9400"),
+                CST=c("60700","8400","84800","51500",
+                      "333300","90900","44700","15800","9600","218600","0",
+                      "21900","37500","134400","116700","35100","21500","63800",
+                      "71000","67800","82800","63600","0","103900","37700",
+                      "61600","10200","14600","190000","6400","155700","15500",
+                      "142400","95200","7100","256400","35500","61400","291600",
+                      "23200","36700","9300","74700","482900","15900","5800",
+                      "62500","100600","10100","64900","5500"),
+                IT=c("40900","4400","55000","24000",
+                      "202700","32100","15000","6600","1800","149800","91400",
+                      "5600","11300","60800","43200","13400","17200","34700",
+                      "45400","4100","28400","19400","56500","16300","28700",
+                      "44300","5700","8800","20200","4500","32000","14700",
+                      "74400","54100","3100","71000","39000","20700","82400",
+                      "3100","32100","5800","48400","218500","11700","1700",
+                      "57500","30400","10100","35600","3900"))
+
+reshapeddf1<-gather(df1,
+                    key,
+                    value,
+                    2:4)
+ggplot(reshapeddf1,
+       aes(x=PL,
+           y=as.numeric(value),
+           fill=key)) + 
+  geom_bar(stat = "identity",
+           position = position_dodge())+ 
+  theme_bw()+
+    theme(plot.title = element_text(hjust=0.5),
+          axis.text.y = element_text(size = 5))+
+    labs(title="Rates of Community Supervision in the US by State",
+         x="Number of Individuals",
+         y="Year")+
+    coord_flip()+
+     scale_fill_economist(breaks=c("TCP","CST","IT"),
+                        labels=c("Under 'Community \nSupervision'",
+                                 "On \nProbation/Parole",
+                                 "Incarcerated"))
+
+```
+
+However, this graph contained too much data and is difficult to read.
+
+In order to get a better understanding of how much individual states use community supervision in relation to the United States as a whole, here is a graph that shows a handful of states' data. It is important to note that this graph shows the number of individuals who are under some type of community supervision and does not take the overall state population into consideration. Michigan's numbers for individuals under supervision and under parole/probation were not available.
+
+```{r}
+library(ggplot2)
+library(ggthemes)
+library(tidyr)
+
+df2<-data.frame(PL=c("CA","DC","FL","MD","MI","PA","TX"),
+                TCP=c("536100","10400","366000","99000","0","368100", "681900"),
+                CST=c("333300","9600","218600","82800", "0","291600","482900"),
+                IT=c("202700","1800","149800","28400","51500","82400","218500"))
+reshapeddf2<-gather(df2,
+                    key, 
+                    value,
+                    2:4)
+ggplot(reshapeddf2,
+       aes(x=PL,
+           y=as.numeric(value),
+           fill=key)) + 
+  geom_bar(stat = "identity",
+           position = position_dodge())+ 
+  theme_bw()+
+  theme(plot.title = element_text(hjust=0.5),
+        axis.text.y = element_text(size = 5))+
+  labs(title="Rates of Community Supervision in the Certain States",
+       x="Year",
+       y="Number of Individuals")+
+  scale_fill_economist(breaks=c("TCP","CST","IT"),
+                      labels=c("Under 'Community \nSupervision'",
+                               "On \nProbation/Parole",
+                               "Incarcerated"))
+
+```
+
+# **QGIS**
+
+## QGIS Mapping
+
+After finishing with R Software, I moved on to geographical mapping in QGIS. On this platform, I worked with the same BJS data and mapped it geographically. While the graphs created above did not take state population into consideration, this map does. I decided to calculate the percentage of state residents that were incarcerated in all fifty states. I did this by using the BJS Report and Census Data from 2016 (the same year as the BJS Report). 
+
+```{r}
+library(png) 
+library(jpeg)
+library(grid)
+img <- readPNG("//Sarah/U. of Michigan/Semester 2/SW 670 001/QGIS/QGIS Assignment/QGIS Assignment.png") 
+grid.raster(img)
+```
+
+While no state incarcerates more than 1% of their residents, the map shows that the states that utilize incarceration most frequently are in the southern parts of the country (specifically Alabama, Arkansas, Georgia, Lousiana, Mississippi, and Oklahoma). 
+
+# **Tableau** 
+
+## Tableau Part 1
+
+The final software that I utilized was Tableau. This drag and drop software is fairly intuitive and allowed me to create interactive dashboards with multiple graphs. The first map I created with my data shows how many individuals are incarcerated per 100,000 residents in every state. Unfortunately, it was not possible to import this worksheet in its interactive form into R and R Markdown. 
+
+```{r}
+library(png) 
+library(grid)
+tab <- readPNG("/Sarah/U. of Michigan/Semester 2/SW 670 001/Tableau/Final Product/Incarcerated.png") 
+grid.raster(tab)
+```
+
+In creating a visually pleasing dashboard in Tableau, I decided to include the gender breakdown of incarcerated indiviudals per 100,000 state residents. The map of the states is blue and the boxplots with the gender information are red (women) and yellow (men). 
+
+```{r}
+library(png) 
+library(grid)
+img <- readPNG("/Sarah/U. of Michigan/Semester 2/SW 670 001/Tableau/Final Product/Worksheet.png") 
+grid.raster(img)
+```
+
+## Tableau Part 2
+
+I have also included a second map created with Tableau. This one shows the total number of individuals incarcerated in each state. On the surface, this map looks fairly straightforward and easy to create. 
+
+```{r}
+library(png) 
+library(grid)
+img <- readPNG("/Sarah/U. of Michigan/Semester 2/SW 670 001/Tableau/Final Product/State & Race.png") 
+grid.raster(img)
+```
+
+However, in its full, interactive state, this map allows viewers to see the racial breakdown of individuals incarcerated in each state. I have used Texas to illustrate this: 
+
+```{r}
+library(png) 
+library(grid)
+img <- readPNG("/Sarah/U. of Michigan/Semester 2/SW 670 001/Tableau/Final Product/State & Race - Texas.png") 
+grid.raster(img)
+```
+
+# **Conclusion**
+
+## Key Takeaways
+
+In short, during the course of the semester I have learned tools to effectively use three commonly-used data visualization programs. I have become confident in my abilities to clean and work with numerous datasets and to produce visually pleasing and informative images and maps about datasets. These images and maps turn data from daunting numerical tables into approachable nuggets of information. I am looking forward to utilizing my skills in my future endeavors. 
+
