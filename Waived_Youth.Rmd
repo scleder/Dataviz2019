@@ -1,0 +1,118 @@
+---
+title: "Demographics of Youth Waived to Adult Court"
+author: "Sarah Leder"
+date: "6/18/2019"
+output: 
+  html_document: 
+    theme: yeti
+    highlight: haddock
+    number_sections: yes
+    toc: yes
+    toc_float: true
+    code_folding: hide
+  pdf_document: 
+    number_sections: yes
+    toc: yes
+  slidy_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      message = FALSE,
+                      warning = FALSE)
+```
+
+# Juvenile and Adult Court 
+
+The youth and adult court systems have existed as separate entities since 1899. Fastforward nearly one hundred years and the system is largley seen as too lenient on the youth involved in it. Because of perceptions and predictions of rising youth crime rates, the vast majority of states enacted harsher laws that eased the transfer of a youth from the juvenile system into its adult counterpart. These measures included lowering the minimum age to be tried as an adult, longer sentences, and a more explicit focus on retribution. 
+
+The Office of Jucenile Justice and Delinquency Prevention has been tracking juvenile court trends and [analyzing delinquency cases](https://www.ojjdp.gov/ojstatbb/ezajcs/asp/selection.asp) since 2005.
+
+The graphs below were made using those data. 
+
+## Waiving Youth to Adult Court
+
+Although the number of youth being transferred (or waived) to the adult court system has dramatically decreased in the past 25 years, there are still far too many children being sentenced to and serving adult time. 
+
+### Waived Youth by Offense Type
+
+As you can see in the graph below, while all offense categories (person, property, drug, and public order) are decreasing, the number of youth being waived for violent crime is the largest chunk. 
+```{r}
+library(ggplot2)
+library(ggthemes)
+library(tidyr)
+
+off_df <- data.frame(Year=c("2005","2006","2007","2008","2009",
+                             "2010","2011","2012","2013","2014",
+                             "2015","2016", "2017"),
+                     Person=c(3023, 3217, 3156, 3322, 3018,
+                              2642, 2362, 2154, 2078, 2082,
+                              1685, 1873, 2103),
+                     Property=c(2039, 2218, 2029, 1949, 1877,
+                                1934, 1634, 1506, 1172, 1280,
+                                1062, 1097, 1015),
+                     Drug=c(892, 891, 885, 731, 665,
+                            703, 594, 453, 399, 423,
+                            316, 302, 331),
+                     Public_Order=c(619, 596, 642, 565, 693,
+                                    562, 451, 427, 350, 370,
+                                    303, 302,343))
+
+myreshaped_off_df<-gather(off_df,
+                           key,
+                           value,
+                           2:5) 
+ggplot(myreshaped_off_df,
+       aes(x=Year,
+           y=value,
+           fill=key,value)) + 
+  geom_bar(stat = "identity",
+           position = position_dodge())+ 
+  theme_bw()+
+  theme(plot.title = element_text(hjust=0.5),
+        axis.text.y = element_text(size = 5))+
+  labs(title="Youth Waived to Adult Court:\n by Offense Type",
+       x="Year",
+       y="Number of Individuals")+
+  scale_fill_economist(name=("Offense Type"))
+```
+
+### Waived Youth by Race/Ethnicity
+
+As you can see in the graph below, while the number of all races/ethnicities (white, black, hispanic, and other) are generally decreasing, the number of black youth being waived is disproportionately the largest. 
+
+```{r}
+
+race_df <- data.frame(Year=c("2005","2006","2007","2008","2009",
+                             "2010","2011","2012","2013","2014",
+                             "2015","2016", "2017"),
+                      White=c(2965,3004,2728,2515,2350,
+                              2350,1968,1780,1421,1369,
+                              1207,1175,1186),
+                      Black=c(2566,2794,2771,2981,2776,
+                              2605,2254,2080,1852,2160,
+                              1631,1841,2056),
+                      Hispanic=c(863,946,1027,917,952,
+                                 735,706,578,619,548,
+                                 435,459,463),
+                      Other=c(179,179,187,155,133,
+                                149,113,101,107,78,
+                                94,100,87))
+myreshaped_race_df<-gather(race_df,
+                     key,
+                     value,
+                     2:5) 
+ggplot(myreshaped_race_df,
+       aes(x=Year,
+           y=value,
+           fill=key,value)) + 
+  geom_bar(stat = "identity",
+           position = position_dodge())+ 
+  theme_bw()+
+  theme(plot.title = element_text(hjust=0.5),
+        axis.text.y = element_text(size = 5))+
+  labs(title="Youth Waived to Adult Court by Race/Ethnicity",
+       x="Year",
+       y="Number of Individuals")+
+  scale_fill_economist((name=c("Race")))
+```
