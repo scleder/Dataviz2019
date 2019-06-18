@@ -24,19 +24,19 @@ knitr::opts_chunk$set(echo = TRUE,
 
 # Juvenile and Adult Court 
 
-The youth and adult court systems have existed as separate entities since 1899. Fastforward nearly one hundred years and the system is largley seen as too lenient on the youth involved in it. Because of perceptions and predictions of rising youth crime rates, the vast majority of states enacted harsher laws that eased the transfer of a youth from the juvenile system into its adult counterpart. These measures included lowering the minimum age to be tried as an adult, longer sentences, and a more explicit focus on retribution. 
+The youth and adult court systems have existed as separate entities since 1899. Fastforward nearly one hundred years to the 1980s and the juvenile system is largely seen as too lenient on the youth. Because of perceptions and predictions of rising youth crime rates, the vast majority of states enacted harsher laws that eased the transfer of a youth from the juvenile system to its adult counterpart. These measures included lowering the minimum age to be tried as an adult, longer sentences, "once an adult, always an adult" provisions, and a more explicit focus on retribution. 
 
-The Office of Jucenile Justice and Delinquency Prevention has been tracking juvenile court trends and [analyzing delinquency cases](https://www.ojjdp.gov/ojstatbb/ezajcs/asp/selection.asp) since 2005.
+The Office of Jucenile Justice and Delinquency Prevention has been tracking juvenile court trends since 1985 and [analyzing delinquency cases](https://www.ojjdp.gov/ojstatbb/ezajcs/asp/selection.asp) since 2005.
 
 The graphs below were made using those data. 
 
 ## Waiving Youth to Adult Court
 
-Although the number of youth being transferred (or waived) to the adult court system has dramatically decreased in the past 25 years, there are still far too many children being sentenced to and serving adult time. 
+Although the number of youth being transferred (or waived) to the adult court system has dramatically decreased in the past 25 years, there are still far too many children being sentenced to and serving adult time. These individuals are disproportionately youth of color and convicted of person (almost all of which are violent) offenses.
 
 ### Waived Youth by Offense Type
 
-As you can see in the graph below, while all offense categories (person, property, drug, and public order) are decreasing, the number of youth being waived for violent crime is the largest chunk. 
+As you can see in the graph below, while all offense categories (person, property, drug, and public order) are all generally decreasing, the number of youth being waived for violent crime continues to be the most common offense type that is transferred.
 ```{r}
 library(ggplot2)
 library(ggthemes)
@@ -78,8 +78,7 @@ ggplot(myreshaped_off_df,
 ```
 
 ### Waived Youth by Race/Ethnicity
-
-As you can see in the graph below, while the number of all races/ethnicities (white, black, hispanic, and other) are generally decreasing, the number of black youth being waived is disproportionately the largest. 
+The graph below shows that, while the number of all races/ethnicities (white, black, hispanic, and other) are generally decreasing, the number of black youth being waived is disproportionately the largest. 
 
 ```{r}
 
