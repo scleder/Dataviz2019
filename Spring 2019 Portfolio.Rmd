@@ -296,3 +296,8 @@ grid.raster(img)
 
 In short, during the course of the semester I have learned tools to effectively use three commonly-used data visualization programs. I have become confident in my abilities to clean and work with numerous datasets and to produce visually pleasing and informative images and maps about datasets. These images and maps turn data from daunting numerical tables into approachable nuggets of information. I am looking forward to utilizing my skills in my future endeavors. 
 
+
+***
+
+You can go back to my GitHub Space by clicking [here](https://scleder.github.io/Dataviz2019/).
+
