@@ -119,5 +119,4 @@ ggplot(myreshaped_race_df,
 
 ***
 
-Return to My GitHub Space
 You can go back to my GitHub Space by clicking [here](https://scleder.github.io/Dataviz2019/).
