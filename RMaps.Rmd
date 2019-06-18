@@ -76,3 +76,8 @@ DC%>%
 mapview(DC, zcol = "estimate", legend = TRUE, 
         layer.name = "Washington D.C.: Median Family Income")
 ```
+
+
+***
+
+You can go back to my GitHub Space by clicking [here](https://scleder.github.io/Dataviz2019/).
