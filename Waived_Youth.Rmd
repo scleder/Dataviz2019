@@ -24,9 +24,13 @@ knitr::opts_chunk$set(echo = TRUE,
 
 # Juvenile and Adult Court 
 
-The youth and adult court systems have existed as separate entities since 1899. Fastforward nearly one hundred years to the 1980s and the juvenile system is largely seen as too lenient on the youth. Because of perceptions and predictions of rising youth crime rates, the vast majority of states enacted harsher laws that eased the transfer of a youth from the juvenile system to its adult counterpart. These measures included lowering the minimum age to be tried as an adult, longer sentences, "once an adult, always an adult" provisions, and a more explicit focus on retribution. 
+Prior to the 20^th^ century, juveniles were tried, sentenced, and served in the adult criminal justice system. In 1899, Cook County, Illinois was the first to create a juvenile court. Since then, the United States has, largely, recognized that youth who commit crimes are less blameworthy than their adult counterparts. The adult justice system focuses on adjudication, retribution, and deterrence. But, because children are seen as having a greater capacity to change, the juvenile justice system focuses on rehabilitation, skill development,  and addressing any treatment needs.^1^ While this system aimed at helping youth grow and mature, it quickly became clear that the same legal provisions that exist in the adult system were not being applied. In 1967, the Supreme Court decision *In re Gault* declared that the constitutional legal protections given to adults also apply to juveniles.^2^ 
 
-The Office of Jucenile Justice and Delinquency Prevention has been tracking juvenile court trends since 1985 and [analyzing delinquency cases](https://www.ojjdp.gov/ojstatbb/ezajcs/asp/selection.asp) since 2005.
+By the 1980s, a public fear of rising crime rates (including juvenile) prompted politicians to take ‘tough on crime’ stances and more harshly punish individuals accused of wrongdoing. For adults, these changes included the institution of three-strikes laws and mandatory minimums for drug offenses.^3^ These efforts disproportionately targeted materially-impoverished communities people of color. At the same time as these changes rocked the adult criminal justice system, changes were being introduced at the juvenile court level. The realities of increased juvenile crime rates and the predictions of a generation of ‘super predators’ led to the introduction of mechanisms to waive youth to adult court. Some states had no minimum age at which a child could be transferred to the adult justice system. Transferring youth to the adult system meant they could be sentenced to life sentences and even the death penalty.^4^
+
+Though juvenile crime rates have dramatically decreased since the 1990s, the policies introduced linger. Beginning in the mid-2000s, a paradigm shift occurred and the discussions surrounding juvenile justice shifted towards a focus on evidence- and community-based practices. Campaigns to Raise the Age of juvenile who were automatically considered adults have reduced the number of staes with this practice from 14 in 2007, to 4 in 2019.^6^
+
+The Office of Juvenile Justice and Delinquency Prevention has been tracking juvenile court trends since 1985 and [analyzing delinquency cases](https://www.ojjdp.gov/ojstatbb/ezajcs/asp/selection.asp) since 2005.
 
 The graphs below were made using those data. 
 
@@ -115,6 +119,19 @@ ggplot(myreshaped_race_df,
        y="Number of Individuals")+
   scale_fill_economist((name=c("Race")))
 ```
+
+***
+^1^ https://youth.gov/youth-topics/juvenile-justice
+
+^2^ https://jlc.org/youth-justice-system-overview
+
+^3^ https://www.theatlantic.com/politics/archive/2014/04/a-timeline-of-the-rise-and-fall-of-tough-on-crime-drug-sentencing/360983/
+
+^4^ https://www.govinfo.gov/content/pkg/CHRG-110shrg46050/html/CHRG-110shrg46050.htm
+
+^5^ https://www.nytimes.com/2007/11/15/opinion/15thu3.html
+
+^6^ http://www.justicepolicy.org/uploads/justicepolicy/documents/raisetheagesummary_final_3_6_16.pdf
 
 ***
 
