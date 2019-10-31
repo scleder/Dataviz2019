@@ -19,8 +19,9 @@ My name is Sarah Leder and I am an MSW candidate at the University of Michigan's
 
 ## Current Work
 I am currently in my final semester of my Master of Social Work program. I am taking courses on Campaigns and Elections, Policy Development and Enactment, Fundraising and Grantwriting, and Statistics in Policy Analysis and Evaluation. Additionally, I am working as a Research Associate, writing a white paper exploring the history of access to post-secondary educational opportunities for incarcerated individuals in Michigan.
+
 # My Porfolio
-As the summer continues, I will add content to this GitHub space that displays the data visualization and analysis skills I am acquiring. Below are samples of my previous work:
+I will add content to this GitHub space that displays the data visualization and analysis skills I am acquiring. Below are samples of my previous work:
 
 * [Spring 2019 Portfolio](https://scleder.github.io/Dataviz2019/Spring_2019_Portfolio.html)
 * [Mapping with R](https://scleder.github.io/Dataviz2019/RMaps.html)
