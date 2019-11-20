@@ -174,3 +174,9 @@ Rich, S., Mellnik, T., Kelly, K., & Lowery, W. (2018). Murder with impunity: Uns
 Rosenfeld, R. & Wallman, J. Did de-policing cause the increase in homicide rates? Criminology & Public Policy, 18, 51-75
 
 Violence Policy Center. (2018). Black homicide victimization in the United States: An analysis of 2015 homicide data. Washington, D.C.: Marty Langley & Josh Sugarmann.
+
+
+
+***
+
+You can go back to my GitHub Space by clicking [here](https://scleder.github.io/Dataviz2019/).
