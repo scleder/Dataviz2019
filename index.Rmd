@@ -6,11 +6,9 @@ output:
   html_document: 
     theme: yeti
     highlight: haddock
-    number_sections: yes
     toc: yes
     toc_float: true
   pdf_document: 
-    number_sections: yes
     toc: yes
   slidy_presentation: default
 ---
