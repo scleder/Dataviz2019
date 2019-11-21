@@ -1,7 +1,6 @@
 ---
 title: "My GitHub Space"
 author: "Sarah Leder"
-date: "6/12/2019"
 output: 
   html_document: 
     theme: yeti
@@ -12,13 +11,13 @@ output:
     toc: yes
   slidy_presentation: default
 ---
-# About Me 
+# **About Me** 
 My name is Sarah Leder and I am an MSW candidate at the University of Michigan's School of Social Work. I am concentrating my studies in Social Policy and Evaluation with an interest in Communities and social systems. My professional experiences are focused on the American criminal justice system and justice reform. During the summer of 2019, I worked as a research and policy intern at the Justice Policy Institute in Washington, D.C. I contributed to projects concerning the parole process in Maryland, D.C.'s Youth Rehabilitation Act, the price of incarcerating youth across the U.S., and the practice of transferring youth from the juvenile justice system to the adult criminal justice system.
 
 ## Current Work
 I am currently in my final semester of my Master of Social Work program. I am taking courses on Campaigns and Elections, Policy Development and Enactment, Fundraising and Grantwriting, and Statistics in Policy Analysis and Evaluation. Additionally, I am working as a Research Associate, writing a white paper exploring the history of access to post-secondary educational opportunities for incarcerated individuals in Michigan.
 
-# My Porfolio
+# **My Porfolio**
 I will add content to this GitHub space that displays the data visualization and analysis skills I am acquiring. Below are samples of my previous work:
 
 * [Spring 2019 Portfolio](https://scleder.github.io/Dataviz2019/Spring_2019_Portfolio.html)
