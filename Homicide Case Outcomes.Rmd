@@ -47,7 +47,7 @@ This paper explores whether the police disposition (the outcome of a homicide ca
 ## Police Disposition (Case Outcome)
 
 Before analyzing if and how a victim’s race and/or sex played a role in the outcomes of these homicide cases, it was important to examine the overall distribution of cases. Figure 1 shows that, of 52,179 cases, roughly 50 percent of all homicide cases remain unsolved (either by being closed without an arrest or remaining open without an arrest). 
-```{r fig.align="center", out.width = "500px", fig.asp=0.50}
+```{r fig.align="center", out.width = "900px", fig.asp=0.50}
 library(png) 
 library(grid)
 img <- readPNG("Graph 1.png") 
