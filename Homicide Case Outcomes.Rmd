@@ -45,7 +45,6 @@ This paper explores whether the police disposition (the outcome of a homicide ca
 # **Results** {.tabset .tabset-fade .tabset-pills}
 
 ## Police Disposition (Case Outcome)
-
 Before analyzing if and how a victim’s race and/or sex played a role in the outcomes of these homicide cases, it was important to examine the overall distribution of cases. Figure 1 shows that, of 52,179 cases, roughly 50 percent of all homicide cases remain unsolved (either by being closed without an arrest or remaining open without an arrest). 
 ```{r fig.align="center", out.width = "900px", fig.asp=0.50}
 library(png) 
@@ -124,18 +123,15 @@ grid.raster(img)
 # **Discussion** {.tabset .tabset-fade .tabset-pills}
 
 ## Victims' Sex
-
 Through examining The Washington Post’s homicide dataset, it was possible to gain a better understanding of how/if a victim’s sex and race/ethnicity are correlated with the police’s case disposition (closed with an arrest, closed without an arrest, or open/no arrest).^2^  Though results indicate that there is a statistically significant difference in the outcomes of homicide cases based on the victim’s sex, it would be irresponsible to assert any causal connections between these numbers. 
 
 ## Victims' Race/Ethnicity
-
 When looking at Figure 3 (above), it is obvious that there are stark differences in the number of homicide victims by race. According to the above-referenced 2017 American Community Survey data, only approximately 13 percent of American citizens self-identify as black or African American (U.S. Census Bureau, 2017). However, they comprise more than 63 percent of the homicide cases in this dataset. Conversely, while roughly 73 percent of Americans self-report as white, only 12 percent of homicide victims were identified as such (U.S. Census Bureau, 2017).  
 
 It is interesting to note, however, that these data show that homicide case dispositions are surprisingly similar despite a victim’s race. As Figure 4 shows, the average case dispositions for homicide victims (grouped by race) range from just above 1.5 to about 2. This range is relatively small when comparing to the original data, which contained numbers between 1 and 3. 
 
 
 ## Victims' Sex and Race/Ethnicity
-
 Finally, the relationship between a homicide case’s disposition and the victim’s sex and the victim’s race was examined. Figure 5 displays the average case disposition in two bar graphs separated by victims’ race and sex. Overall, across all races, female victims have lower case dispositions than the male victims. Roughly speaking cases with male victims saw dispositions between 1.68 (white males) and 2.1 (race unknown). While it can be difficult to interpret the meaning of this number, it is important to note that across all the races, police were similarly effective (or ineffective) in solving homicide cases. This pattern also holds true in cases with female victims were between 1.47 (Asian females) and 1.75 (race unknown and other). These averages are lower than those for male homicide victims, thus indicating that police are slightly more effective at solving cases with female victims.    
 
 ^2^ This analysis makes the assumption that a case closed with an arrest means the individual who perpetuated the crime was apprehended and processed through the criminal justice system.
