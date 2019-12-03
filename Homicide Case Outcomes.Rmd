@@ -33,7 +33,7 @@ In addition to collecting information about sex, the American Community Survey a
 
 Despite the fact that a majority of Americans identify as white, the victims of homicides have, largely, been black or African American. This trend holds true since at least 1980 (Prison Policy Initiative, 2018). According to a report published by the Violence Policy Center (using unpublished FBI Supplementary Homicide Report data from 2015) the homicide rate per 100,000 among black homicide victims was approximately seven times higher than that of white victims (18.68 and 2.67 respectively) (Violence Policy Center, 2018). While only 13 percent of Americans identify as black or African American, in 2015, they represented approximately “51 percent of all homicide victims” (Violence Policy Center, 2018).   
 
-Given the disproportionate homicide rates by both race and gender, this paper examines whether the outcome (or disposition) of polices’ homicide cases were impacted by a victim’s sex or race/ethnicity. 
+Given the disproportionate homicide rates by both race and gender, this paper examines whether the outcome (or disposition) of police departments’ homicide cases were impacted by a victim’s sex or race/ethnicity. 
 
 # **Methodology** 
 
