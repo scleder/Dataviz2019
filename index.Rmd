@@ -23,5 +23,5 @@ I will add content to this GitHub space that displays the data visualization and
 * [Spring 2019 Portfolio](https://scleder.github.io/Dataviz2019/Spring_2019_Portfolio.html)
 * [Mapping with R](https://scleder.github.io/Dataviz2019/RMaps.html)
 * [Transferring Youth to Adult Court](https://scleder.github.io/Dataviz2019/Waived_Youth.html)
-* [Homicide Case Outcomes: Does a Victim's Sex or Race Matter?](https://scleder.github.io/Dataviz2019/Homicide_Case_Outcomes.html)
+* [Homicide Case Outcomes: Does a Victim's Sex or Race Play a Role?](https://scleder.github.io/Dataviz2019/Homicide_Case_Outcomes.html)
 * More to come
