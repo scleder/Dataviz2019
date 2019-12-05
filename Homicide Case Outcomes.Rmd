@@ -1,5 +1,5 @@
 ---
-title: "Homicide Case Outcomes: Does a Victim's Sex or Race Matter?"
+title: "Homicide Case Outcomes: Does a Victim's Sex or Race Play a Role?"
 author: "Sarah Leder"
 date: "11/20/2019"
 output: 
@@ -28,25 +28,25 @@ knitr::opts_chunk$set(echo = FALSE,
 Between 1994 and 2015, the violent crime rate in the United States dropped by roughly 62 percent (or from 7 million victims to 2.7 million) (Morgan & Oudekerk, 2018). Despite this, according to the World Bank’s online database, the United States’ intentional homicide rate remains higher than any other member nation of the North American Treaty Organization (NATO) (United Nations, 2017). It is important to note that crime rates vary widely based on location within the U.S. The FBI suggests that these differences exist because of a number of factors which can include an area’s population and its economic conditions (Gramlich, 2019).  
 
 According to the 2017 American Community Survey, roughly 51 percent of Americans identify as female and 49 percent identify as male. (U.S. Census Bureau, 2017). Despite this, historically, the number of male homicide victims far exceeds the number of female victims. For instance, between 1976 and 1987, the FBI’s Uniform Crime Reports data showed that 77 percent of homicide victims were identified as male and 23 percent were female (Kellermann & Mercy, 1992).  
+
 In addition to collecting information about sex, the American Community Survey asks questions about race. According to the same 2017 data, approximately 73 percent of Americans identify as white, 13 percent as black or African American, and 5 percent as Asian (U.S. Census Bureau, 2017).  The U.S. considers being Hispanic or Latino an ethnicity (not a race) and roughly 18 percent of Americans identify as Hispanic or Latino (and are of any other race) (U.S. Census Bureau, 2017).   
 
 Despite the fact that a majority of Americans identify as white, the victims of homicides have, largely, been black or African American. This trend holds true since at least 1980 (Prison Policy Initiative, 2018). According to a report published by the Violence Policy Center (using unpublished FBI Supplementary Homicide Report data from 2015) the homicide rate per 100,000 among black homicide victims was approximately seven times higher than that of white victims (18.68 and 2.67 respectively) (Violence Policy Center, 2018). While only 13 percent of Americans identify as black or African American, in 2015, they represented approximately “51 percent of all homicide victims” (Violence Policy Center, 2018).   
 
-Given the disproportionate homicide rates by both race and gender, this paper examines whether the outcome (or disposition) of polices’ homicide cases were impacted by a victim’s sex or race/ethnicity. 
+Given the disproportionate homicide rates by both race and gender, this paper examines whether the outcome (or disposition) of police departments’ homicide cases were impacted by a victim’s sex or race/ethnicity. 
 
 # **Methodology** 
 
 *The Washington Post* created a database of homicides that occurred in 55 of the largest American cities with data from 2007 to 2017 (Rich, Mellnik, Kelly, & Lowery, 2018). Of the 54,868 cases of criminal homicide *The Washington Post* reviewed, police made arrests in roughly 50 percent of cases (Rich et al., 2018). By reviewing more than a decade of homicide reports from 55 American cities, these data will contribute to better understanding this phenomenon. The Washington Post’s database was constructed using various resources and, overall, provides more detail than FBI and Bureau of Justice Statistics reports. Reporters cleaned and standardized the data and compared them to FBI data to “ensure the records were as accurate as possible” (Rich et al., 2018). There are 52,179 homicide victims in the dataset.   
 
-This investigator was interested in exploring whether the police disposition (the outcome of a homicide case) is correlated with the sex and race/ethnicity of the victim of the murder. In *The Washington Post*’s dataset, there are three possible outcomes in homicide cases: the case is closed when the police make an arrest, the case is closed without an arrest, or the case remains open and unsolved. The data have three options for the victims’ sex: male, female, and unknown. There were six race/ethnicity categories: white, black, Hispanic, Asian, other, or unknown. In the results section below only male and female victims are compared, as the unknown group was so small. The data include all six categories for race/ethnicity (white, black, Asian, Hispanic, other, and unknown). 
+This paper explores whether the police disposition (the outcome of a homicide case) is correlated with the sex and race/ethnicity of the victim of the murder. In *The Washington Post*’s dataset, there are three possible outcomes in homicide cases: the case is closed when the police make an arrest, the case is closed without an arrest, or the case remains open and unsolved. The data have three options for the victims’ sex: male, female, and unknown. There were six race/ethnicity categories: white, black, Hispanic, Asian, other, or unknown. In the results section below only male and female victims are compared, as the unknown group was so small. The data include all six categories for race/ethnicity (white, black, Asian, Hispanic, other, and unknown). 
 
 
 # **Results** {.tabset .tabset-fade .tabset-pills}
 
 ## Police Disposition (Case Outcome)
-
 Before analyzing if and how a victim’s race and/or sex played a role in the outcomes of these homicide cases, it was important to examine the overall distribution of cases. Figure 1 shows that, of 52,179 cases, roughly 50 percent of all homicide cases remain unsolved (either by being closed without an arrest or remaining open without an arrest). 
-```{r fig.align="center", out.width = "500px", fig.asp=0.50}
+```{r fig.align="center", out.width = "900px", fig.asp=0.50}
 library(png) 
 library(grid)
 img <- readPNG("Graph 1.png") 
@@ -79,7 +79,8 @@ grid.raster(img)
 ```
 
 ## Victims' Race/Ethnicity
-The below table displays all the murder victims in The Washington Post’s database organized by their race. It should be noted that in 4,899 cases (or 9.3 percent), the race of the victim was other/unknown. The majority of homicide victims were identified as black or African American (63.9 percent). White homicide victims only represented 12 percent of homicides in the 55 cities examined. Homicide victims who were identified as Asian comprised only 1.3 percent of all cases. And Hispanic individuals were victims in 13.2 percent of the total number of homicide cases included in this dataset. 
+The below table displays all the murder victims in 
+*The Washington Post*’s database organized by their race. It should be noted that in 4,899 cases (or 9.3 percent), the race of the victim was other/unknown. The majority of homicide victims were identified as black or African American (63.9 percent). White homicide victims only represented 12 percent of homicides in the 55 cities examined. Homicide victims who were identified as Asian comprised only 1.3 percent of all cases. And Hispanic individuals were victims in 13.2 percent of the total number of homicide cases included in this dataset. 
 ```{r fig.align="center", out.width = "400px"}
 library(png) 
 library(grid)
@@ -104,7 +105,7 @@ grid.raster(img)
 ## Victims' Sex and Race/Ethnicity
 In the side-by-side graphs below, the average case outcomes (organized by victim’s race) are displayed. It is crucial to understand how the y-axis (average disposition) describes the data. The police case dispositions (or outcomes) are sorted into three categories: 1 = closed by arrest, 2 = closed without an arrest, and 3 = open/no arrest. For the purpose of this analysis, the researcher determined that a case closed by an arrest was the best possible outcome while a case that remained open (or without an arrest) was the worst outcome. 
 
-Cases that involved female homicide victims’ cases, on average, were more likely to have dispositions of ‘closed by arrest’ than cases that involved male victims. Additionally, these graphs show how race plays a role in case dispositions. 
+Cases that involved female homicide victims, on average, were more likely to have dispositions of ‘closed by arrest’ than cases that involved male victims. Additionally, these graphs show how race plays a role in case dispositions. 
 ```{r fig.align="center", out.width = "600px"}
 library(png) 
 library(grid)
@@ -123,27 +124,24 @@ grid.raster(img)
 # **Discussion** {.tabset .tabset-fade .tabset-pills}
 
 ## Victims' Sex
+Through examining *The Washington Post*’s homicide dataset, it was possible to gain a better understanding of how/if a victim’s sex and race/ethnicity are correlated with the police’s case disposition (closed with an arrest, closed without an arrest, or open/no arrest).^2^  Though results indicate that there is a statistically significant difference in the outcomes of homicide cases based on the victim’s sex, it would be irresponsible to assert any causal connections between these numbers. 
 
-Through examining The Washington Post’s homicide dataset, it was possible to gain a better understanding of how/if a victim’s sex and race/ethnicity are correlated with the police’s case disposition (closed with an arrest, closed without an arrest, or open/no arrest).^2^  Though results indicate that there is a statistically significant difference in the outcomes of homicide cases based on the victim’s sex, it would be irresponsible to assert any causal connections between these numbers. 
+^2^ This analysis makes the assumption that a case closed with an arrest means the individual who perpetuated the crime was apprehended and processed through the criminal justice system.
 
 ## Victims' Race/Ethnicity
-
-When looking at Figure 3 (above), it is obvious that there are stark differences in the number of homicide victims by race. According to the above-referenced 2017 American Community Survey data, only approximately 13 percent of American citizens self-identify as black or African American (U.S. Census Bureau, 2017). However, they comprise more than 63 percent of the homicide cases in this dataset. Conversely, while roughly 73 percent of Americans self-report as white, only 12 percent of homicide victims were identified as such (U.S. Census Bureau, 2017).  
+When looking at Figure 3 (in results section above), it is obvious that there are stark differences in the number of homicide victims by race. According to the above-referenced 2017 American Community Survey data, only approximately 13 percent of American citizens self-identify as black or African American (U.S. Census Bureau, 2017). However, they comprise more than 63 percent of the homicide cases in this dataset. Conversely, while roughly 73 percent of Americans self-report as white, only 12 percent of homicide victims were identified as such (U.S. Census Bureau, 2017).  
 
 It is interesting to note, however, that these data show that homicide case dispositions are surprisingly similar despite a victim’s race. As Figure 4 shows, the average case dispositions for homicide victims (grouped by race) range from just above 1.5 to about 2. This range is relatively small when comparing to the original data, which contained numbers between 1 and 3. 
 
 
 ## Victims' Sex and Race/Ethnicity
-
-Finally, the relationship between a homicide case’s disposition and the victim’s sex and the victim’s race was examined. Figure 5 displays the average case disposition in two bar graphs separated by victims’ race and sex. Overall, across all races, female victims have lower case dispositions than the male victims. Roughly speaking cases with male victims saw dispositions between 1.68 (white males) and 2.1 (race unknown). While it can be difficult to interpret the meaning of this number, it is important to note that across all the races, police were similarly effective (or ineffective) in solving homicide cases. This pattern also holds true in cases with female victims were between 1.47 (Asian females) and 1.75 (race unknown and other). These averages are lower than those for male homicide victims, thus indicating that police are slightly more effective at solving cases with female victims.    
-
-^2^ This analysis makes the assumption that a case closed with an arrest means the individual who perpetuated the crime was apprehended and processed through the criminal justice system.
+Finally, the relationship between a homicide case’s disposition and the victim’s sex and the victim’s race was examined. Figure 5 displays the average case disposition in two bar graphs separated by victims’ race and sex. Overall, across all races, female victims have lower case dispositions than the male victims. Cases with male victims saw dispositions between 1.68 (white males) and 2.1 (race unknown). While it can be difficult to interpret the meaning of this number, it is important to note that across all the races, police were similarly effective (or ineffective) in solving homicide cases. This pattern also holds true in cases with female victims were between 1.47 (Asian females) and 1.75 (race unknown and other). These averages are lower than those for male homicide victims, thus indicating that police are slightly more effective at solving cases with female victims.    
 
 # **Conclusion**
 
-These findings are important and call attention to the fact that black or African American individuals represent approximately 63 percent of all homicide victims. They also show that homicide cases that involve a female victim are significantly more likely to have their case closed by an arrest than cases with a male victim. Despite this, the most pressing and sobering finding may be that approximately 50 percent of all homicide cases in this dataset were not closed by an arrest. 
+These findings are important and call attention to the fact that black or African American individuals represent approximately 63 percent of all homicide victims. They also show that homicide cases that involve a female victim are significantly more likely to have their case closed by an arrest than cases with a male victim. Despite these troubling findings, the most pressing and sobering one may be that approximately 50 percent of all homicide cases in this dataset were *not* closed by an arrest. 
 
-Bettering the relationship between the police and the public is vital in attempting to address this issue. Policing policies and programs must be altered in an attempt to increase trust between authorities and the public. This is not a call for an increase in police presence in urban areas. After all, as one study concluded, increased numbers of arrests are not correlated with and do not directly affect homicide rates (Rosenthal & Wallman, 2019). Additionally, the data for this paper were gathered from 55 American cities; areas with well-established police departments. 
+Bettering the relationship between the police and the public is vital in any attempt to address this issue. Policing policies and programs must be altered in order to increase trust between authorities and the public. This is not a call for an increase in police presence in urban areas. After all, as one study concluded, increased numbers of arrests are not correlated with and do not directly affect homicide rates (Rosenthal & Wallman, 2019). Additionally, the data for this paper were gathered from 55 American cities; areas with well-established police departments. 
 
 In 2014, the Bureau of Justice Assistance in the Department of Justice released a report entitled “Promising Strategies for Strengthening Homicide Investigations: Findings and Recommendations from the Bureau of Justice Assistance’s Homicide Investigations Enhancement Training and Technical Assistance Project.” A number of recommendations were released concerning making changes to various police departments in areas like homicide unit policies and procedures, detective and supervision selection processes, investigations trainings, and staffing and caseload management methods (Bureau of Justice Assistance, 2014).  More research should be conducted to see if these recommendations could be effective. Additionally, archival review should be conducted in order to explore these and other options to decrease the overall number of unsolved homicides.
 
