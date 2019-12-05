@@ -1,5 +1,5 @@
 ---
-title: "Homicide Case Outcomes: Does a Victim's Sex or Race Matter?"
+title: "Homicide Case Outcomes: Does a Victim's Sex or Race Play a Role?"
 author: "Sarah Leder"
 date: "11/20/2019"
 output: 
