@@ -48,7 +48,7 @@ library(tidyr)
 library(png)
 library(grid)
 
-Annual_BJS_Data <- read_excel("//Sarah/U. of Michigan/Semester 2/SW 670 001/R Data/Annual BJS /Annual BJS Data.xlsx")
+Annual_BJS_Data <- read_excel("Annual BJS Data.xlsx")
 plot(Annual_BJS_Data$Year,
      Annual_BJS_Data$IT,
      ylim = range(0,8000000),
@@ -242,7 +242,7 @@ After finishing with R Software, I moved on to geographical mapping in QGIS. On 
 library(png) 
 library(jpeg)
 library(grid)
-img <- readPNG("//Sarah/U. of Michigan/Semester 2/SW 670 001/QGIS/QGIS Assignment/QGIS Assignment.png") 
+img <- readPNG("QGIS Assignment.png") 
 grid.raster(img)
 ```
 
@@ -257,7 +257,7 @@ The final software that I utilized was Tableau. This drag and drop software is f
 ```{r}
 library(png) 
 library(grid)
-tab <- readPNG("/Sarah/U. of Michigan/Semester 2/SW 670 001/Tableau/Final Product/Incarcerated.png") 
+tab <- readPNG("Incarcerated.png") 
 grid.raster(tab)
 ```
 
@@ -266,7 +266,7 @@ In creating a visually pleasing dashboard in Tableau, I decided to include the g
 ```{r}
 library(png) 
 library(grid)
-img <- readPNG("/Sarah/U. of Michigan/Semester 2/SW 670 001/Tableau/Final Product/Worksheet.png") 
+img <- readPNG("Worksheet.png") 
 grid.raster(img)
 ```
 
@@ -277,7 +277,7 @@ I have also included a second map created with Tableau. This one shows the total
 ```{r}
 library(png) 
 library(grid)
-img <- readPNG("/Sarah/U. of Michigan/Semester 2/SW 670 001/Tableau/Final Product/State & Race.png") 
+img <- readPNG("State & Race.png") 
 grid.raster(img)
 ```
 
@@ -286,7 +286,7 @@ However, in its full, interactive state, this map allows viewers to see the raci
 ```{r}
 library(png) 
 library(grid)
-img <- readPNG("/Sarah/U. of Michigan/Semester 2/SW 670 001/Tableau/Final Product/State & Race - Texas.png") 
+img <- readPNG("State & Race - Texas.png") 
 grid.raster(img)
 ```
 
