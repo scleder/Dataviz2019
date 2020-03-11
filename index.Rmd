@@ -12,7 +12,7 @@ output:
   slidy_presentation: default
 ---
 # **About Me** 
-My name is Sarah Leder and I graduated with my MSW from the University of Michigan's School of Social Work in December 2019. I am concentrated my studies in Social Policy and Evaluation with an interest in Communities and social systems. My professional experiences are focused on the American criminal justice system and justice reform. During the summer of 2019, I worked as a research and policy intern at the Justice Policy Institute in Washington, D.C. I contributed to projects concerning the parole process in Maryland, D.C.'s Youth Rehabilitation Act, the price of incarcerating youth across the U.S., and the practice of transferring youth from the juvenile justice system to the adult criminal justice system.
+My name is Sarah Leder and I graduated with my MSW from the University of Michigan's School of Social Work in December 2019. I am concentrated my studies in Social Policy and Evaluation with an interest in Communities and Social Systems. My professional experiences have been focused on the American criminal justice system and justice reform. During the summer of 2019, I worked as a research and policy intern at the Justice Policy Institute in Washington, D.C. I contributed to projects concerning the parole process in Maryland, D.C.'s Youth Rehabilitation Act, the price of incarcerating youth across the U.S., and the practice of transferring youth from the juvenile justice system to the adult criminal justice system.
 
 
 # **My Porfolio**
